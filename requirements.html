@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Requirements — KM Role Play</title>
+  <meta
+    name="description"
+    content="KM Role Play system requirements. Everything you need to know before downloading: Windows version, RAM, GPU, disk space and network."
+  />
+
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="page">
+
+    <div class="container">
+
+      <div class="page-head reveal">
+
+        <div class="eyebrow">Requirements</div>
+
+        <h1 class="page-title">
+          What your PC<br />
+          needs.
+        </h1>
+
+        <p class="page-copy">
+          KM Role Play targets Windows 10 and 11 (64-bit). The rest of
+          the list depends on how you run it — the cards below cover
+          the GPU baseline and how much VRAM each setup needs.
+        </p>
+
+      </div>
+
+
+      <!-- =====================================================
+           MINIMUM REQUIREMENTS
+      ====================================================== -->
+
+      <div class="page-section reveal">
+
+        <div class="page-section-title"><span class="n">01</span> Minimum requirements</div>
+
+        <!-- ============ GPU ============ -->
+
+        <div class="req-card">
+
+          <div class="req-card-head">
+            <span class="req-label">Graphics</span>
+            <span class="req-note">NVIDIA discrete GPU</span>
+          </div>
+
+          <div class="req-gpu-tiers">
+
+            <div class="req-tier">
+              <span class="req-tier-tag">Minimum</span>
+              <span class="req-tier-name">NVIDIA RTX 3060+</span>
+              <span class="req-tier-desc">Entry point for the character experience</span>
+            </div>
+
+            <div class="req-tier-arrow">→</div>
+
+            <div class="req-tier rec">
+              <span class="req-tier-tag">Recommended</span>
+              <span class="req-tier-name">NVIDIA RTX 4090</span>
+              <span class="req-tier-desc">24 GB VRAM — runs the full local stack comfortably</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ============ VRAM BUDGET ============ -->
+
+        <div class="req-card">
+
+          <div class="req-card-head">
+            <span class="req-label">VRAM budget · full local</span>
+            <span class="req-total">≈ 24 GB</span>
+          </div>
+
+          <div class="req-bar">
+            <span class="req-bar-seg" style="width: 25%" data-tone="a"></span>
+            <span class="req-bar-seg" style="width: 35.4%" data-tone="b"></span>
+            <span class="req-bar-seg" style="width: 29.2%" data-tone="c"></span>
+            <span class="req-bar-seg" style="width: 2.5%" data-tone="d"></span>
+            <span class="req-bar-seg" style="width: 7.9%" data-tone="e"></span>
+          </div>
+
+          <div class="req-rows">
+
+            <div class="req-row">
+              <span class="req-chip" data-tone="a"></span>
+              <span class="req-row-name">KM Role Play</span>
+              <span class="req-row-example">character rendering &amp; motion</span>
+              <span class="req-row-gb">6 GB</span>
+            </div>
+
+            <div class="req-row">
+              <span class="req-chip" data-tone="b"></span>
+              <span class="req-row-name">Local LLM</span>
+              <span class="req-row-example">Ollama · Gemma4 12B Q4_K_M GGUF</span>
+              <span class="req-row-gb">8.5 GB</span>
+            </div>
+
+            <div class="req-row">
+              <span class="req-chip" data-tone="c"></span>
+              <span class="req-row-name">Local TTS</span>
+              <span class="req-row-example">VoxCPM2</span>
+              <span class="req-row-gb">7 GB</span>
+            </div>
+
+            <div class="req-row">
+              <span class="req-chip" data-tone="d"></span>
+              <span class="req-row-name">Local vector embedding</span>
+              <span class="req-row-example">Ollama · BGE GGUF</span>
+              <span class="req-row-gb">0.6 GB</span>
+            </div>
+
+            <div class="req-row muted">
+              <span class="req-chip" data-tone="e"></span>
+              <span class="req-row-name">Headroom</span>
+              <span class="req-row-example">rendering overhead &amp; buffer</span>
+              <span class="req-row-gb">≈ 1.9 GB</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ============ FLEXIBLE MODES ============ -->
+
+        <div class="req-card">
+
+          <div class="req-card-head">
+            <span class="req-label">Flexible — shrink the budget with external services</span>
+          </div>
+
+          <div class="req-flex">
+
+            <div class="req-flex-row">
+              <span class="req-flex-opt">Switch the LLM to an external API</span>
+              <span class="req-flex-diff">− 8.5 GB</span>
+            </div>
+
+            <div class="req-flex-row">
+              <span class="req-flex-opt">Switch TTS to an external API</span>
+              <span class="req-flex-diff">− 7.0 GB</span>
+            </div>
+
+            <div class="req-flex-row">
+              <span class="req-flex-opt">Switch vector embedding to an external API</span>
+              <span class="req-flex-diff">− 0.6 GB</span>
+            </div>
+
+          </div>
+
+          <div class="req-min">
+            <strong>Minimum execution: 6 GB VRAM.</strong>
+            The character alone, with no local model stack. The app
+            still runs — but you give up the full-local experience.
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =====================================================
+           HOW THE APP RUNS
+      ====================================================== -->
+
+      <div class="page-section reveal">
+
+        <div class="page-section-title"><span class="n">02</span> How it works on your machine</div>
+
+        <p class="prose">
+          KM Role Play is local-first: the app lives on your PC, and
+          your characters and conversations are stored there too.
+          <br /><br />
+          <!-- TODO: describe the actual runtime. For example:
+               - Does it bundle the AI model, or connect to one you
+                 already run (Ollama / llama.cpp / an API)?
+               - Is video rendering done on the GPU?
+               - Anything that affects the hardware list above. -->
+          Depending on your setup, you may be able to point KM Role Play
+          at an AI backend you already run, which changes how much your
+          hardware matters.
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/site.js"></script>
+
+</body>
+</html>
